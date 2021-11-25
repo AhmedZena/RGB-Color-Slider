@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RGB Color Slider</title>
+  <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+
+       <div class="redy">
+        Red  &#160 &#160 &#160 0<input type="range" class="range" min="0" max="255" value="0" id="red" oninput="colors(); onchange= this.nextElementSibling.value=this.value" > 255
+      &#160  &#160 &#160 &#160  &#160 &#160 &#160  value= <output> 0 </output>
+        </div>
+<br>
+       <div class="greeny">
+        Green &#160  0<input type="range" class="range" min="0" max="255" value="0" id="green" oninput="colors(); onchange= this.nextElementSibling.value=this.value"> 255
+        &#160  &#160 &#160 &#160  &#160 &#160 &#160   value =  <output> 0 </output>   
+    </div>
+<br>
+        <div class="bluey">
+        Blue &#160 &#160 &#160 0<input type="range" class="range" min="0" max="255" value="0" id="blue" oninput="colors(); onchange= this.nextElementSibling.value=this.value"> 255
+        &#160  &#160 &#160 &#160  &#160 &#160 &#160    value =  <output> 0 </output>  
+    </div>
+<br>
+<br>
+        <div class="output" > 
+                <label > Resulting color </label>
+                <label  id="labelcolor" style= "empty-cells: show; width: 200px; height: 200px; border: 1px solid rgb(34, 30, 30);">    &#160 &#160 &#160 &#160 &#160 &#160      </label>
+        </div>
+
+        <script>
+
+            function colors(){
+                var red= document.getElementById("red").value;
+                var green = document.getElementById("green").value;
+                var blue = document.getElementById("blue").value;
+                    labelcolor.style.backgroundColor =
+                    'rgb(' + red + ',' + green + ',' + blue + ')';
+            }
+        </script>
+   </div>
+</body>
+</html>
